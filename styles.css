@@ -1,79 +1,28 @@
-:root {
-  --navy: #1f3c4d;
-  --sage: #7f918a;
-  --terracotta: #c9755a;
-  --sand: #e7d6c3;
-  --ivory: #f6f1e7;
-  --shadow: 0 12px 30px rgba(31,60,77,0.1);
-}
+/* 活動介紹專用樣式 */
+.feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; }
+.feature-card { background: #fff; padding: 20px; border-radius: 16px; border: 1px solid rgba(31,60,77,0.12); }
+.feature-card h3 { font-size: 17px; margin-bottom: 8px; color: var(--navy); }
+.feature-card p { font-size: 14px; opacity: 0.8; }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { background: var(--ivory); color: var(--navy); font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; }
-button, input, select, textarea { font: inherit; }
-button { cursor: pointer; }
+.about-block { margin-top: 36px; background: rgba(255,255,255,0.7); padding: 24px; border-radius: 20px; border: 1px solid rgba(31,60,77,0.15); }
+.about-block h2 { font-size: 20px; margin-bottom: 16px; color: var(--navy); }
 
-.wrap { width: min(1180px, calc(100% - 36px)); margin: auto; }
-.narrow { width: min(760px, calc(100% - 32px)); }
-.wide { width: min(1200px, calc(100% - 32px)); }
+/* Rundown 表格 */
+.table-responsive { overflow-x: auto; }
+.rundown-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+.rundown-table th { background: var(--sand); padding: 12px 14px; font-weight: 800; color: var(--navy); }
+.rundown-table td { padding: 14px; border-bottom: 1px solid rgba(31,60,77,0.1); vertical-align: top; }
+.rundown-table tr:last-child td { border-bottom: none; }
 
-.page { display: none; }
-.page.active { display: block; }
-.hidden { display: none !important; }
+/* 獎勵清單 */
+.reward-list { padding-left: 20px; display: grid; gap: 12px; }
+.reward-list li { font-size: 15px; line-height: 1.6; }
 
-/* Header */
-.topbar { position: sticky; top: 0; z-index: 50; height: 64px; display: flex; align-items: center; justify-content: space-between; padding: 0 max(18px, calc((100vw - 1180px)/2)); background: rgba(246,241,231,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(31,60,77,0.15); }
-.brand { border: 0; background: transparent; color: var(--navy); font-weight: 800; font-size: 18px; }
-.mainnav { display: flex; gap: 8px; }
-.mainnav button { border: 0; background: transparent; padding: 8px 12px; font-weight: 700; color: var(--navy); }
-.mainnav .nav-admin { background: var(--sage); color: var(--ivory); border-radius: 99px; }
-
-/* Hero Section */
-.hero-copy { padding: 60px 0; max-width: 680px; }
-.kicker { font-size: 13px; font-weight: 800; color: var(--terracotta); letter-spacing: 0.1em; }
-.hero-copy h1 { font-size: 42px; margin: 12px 0; }
-.practical-lead { font-size: 18px; opacity: 0.8; margin-bottom: 24px; }
-.practical-points { display: grid; gap: 10px; margin-top: 24px; }
-.practical-points div { padding: 12px 16px; background: rgba(231,214,195,0.4); border-radius: 12px; display: flex; gap: 12px; }
-
-/* Form & UI Elements */
-.page-pad { padding: 40px 0; }
-.page-heading h1 { font-size: 32px; margin-bottom: 8px; }
-.progress { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 24px; }
-.progress div { padding: 10px; border: 1px solid rgba(31,60,77,0.2); border-radius: 99px; text-align: center; opacity: 0.5; font-size: 14px; font-weight: 700; }
-.progress div.active { opacity: 1; background: var(--sand); border-color: var(--navy); }
-
-.form-shell, .card-shell, .status-panel { background: rgba(255,255,255,0.6); border: 1px solid rgba(31,60,77,0.15); border-radius: 20px; padding: 28px; box-shadow: var(--shadow); }
-.form-step { display: none; }
-.form-step.show { display: block; }
-.form-title h2 { font-size: 22px; margin-bottom: 20px; color: var(--navy); border-left: 5px solid var(--terracotta); padding-left: 10px; }
-
-.form-grid { display: grid; gap: 16px; margin-bottom: 20px; }
-.form-grid.two { grid-template-columns: 1fr 1fr; }
-
-label { font-weight: 700; font-size: 14px; display: block; margin-bottom: 6px; }
-input, select, textarea { width: 100%; padding: 11px 14px; border: 1px solid rgba(31,60,77,0.25); border-radius: 10px; background: rgba(246,241,231,0.5); outline: none; margin-top: 4px; }
-input:focus, select:focus, textarea:focus { border-color: var(--terracotta); background: #fff; }
-
-.tag-question { margin: 20px 0; padding: 16px; background: rgba(231,214,195,0.3); border-radius: 14px; }
-.tag-question-head { display: flex; justify-content: space-between; margin-bottom: 12px; }
-.tag-options { display: flex; flex-wrap: wrap; gap: 8px; }
-.tag-chip { border: 1px solid rgba(31,60,77,0.3); background: #fff; padding: 6px 14px; border-radius: 99px; font-size: 13px; font-weight: 600; cursor: pointer; }
-.tag-chip.selected { background: var(--navy); color: #fff; border-color: var(--navy); }
-
-.btn { padding: 12px 24px; border-radius: 99px; border: 1px solid var(--navy); font-weight: 800; cursor: pointer; }
-.btn.primary { background: var(--terracotta); border-color: var(--terracotta); color: #fff; }
-.btn.ghost { background: transparent; }
-.form-actions { display: flex; justify-content: space-between; margin-top: 24px; }
-.form-actions.end { justify-content: flex-end; }
-
-/* Admin */
-.admin-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-.kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
-.kpi-grid div { background: #fff; padding: 18px; border-radius: 14px; border: 1px solid rgba(31,60,77,0.15); }
-.app-card { background: #fff; border-radius: 14px; padding: 20px; margin-bottom: 12px; border: 1px solid rgba(31,60,77,0.15); }
+.center-actions { display: flex; justify-content: center; margin-top: 32px; }
+.btn.lg { padding: 16px 36px; font-size: 18px; }
 
 @media (max-width: 650px) {
-  .form-grid.two { grid-template-columns: 1fr; }
-  .kpi-grid { grid-template-columns: 1fr; }
-  .hero-copy h1 { font-size: 32px; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .rundown-table th, .rundown-table td { padding: 10px 8px; font-size: 13px; }
+  .btn.lg { width: 100%; font-size: 16px; }
 }
