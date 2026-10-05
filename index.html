@@ -13,6 +13,7 @@
     </button>
     <nav class="mainnav">
       <button data-go="home">首頁</button>
+      <button data-go="about">活動介紹</button>
       <button data-go="register">立即報名</button>
       <button data-go="status">查詢報名</button>
       <button class="nav-admin" data-go="admin">管理後台</button>
@@ -20,7 +21,7 @@
   </header>
 
   <main>
-    <!-- 首頁 Landing -->
+    <!-- 1. 首頁 Landing -->
     <section id="home" class="page active">
       <div class="wrap hero-practical-grid">
         <div class="hero-copy practical-copy">
@@ -29,7 +30,7 @@
           <p class="practical-lead">打飛一整年的工作壓力！不用擔心找不到隊友，預先混編賽制讓每個人都能快樂上場、歡樂偷分拿大獎！</p>
           <div class="hero-actions">
             <button class="btn primary" data-go="register">開始填寫報名表 →</button>
-            <button class="btn ghost" data-go="status">查詢報名狀態</button>
+            <button class="btn ghost" data-go="about">查看活動 Rundown</button>
           </div>
           <div class="practical-points">
             <div><b>賽事地點</b><span>華江國小體育館</span></div>
@@ -40,7 +41,103 @@
       </div>
     </section>
 
-    <!-- 報名表單 -->
+    <!-- 2. 活動介紹與 Rundown 分頁 -->
+    <section id="about" class="page">
+      <div class="wrap narrow page-pad">
+        <div class="page-heading">
+          <span>EVENT DETAILS</span>
+          <h1>活動流程與賽事規章</h1>
+          <p>兼具控球技巧、歡樂破冰與敵方搶分的刺激感！以下為 3 小時完整規劃：</p>
+        </div>
+
+        <!-- 3 大特色亮點 -->
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>🔀 預編混編賽制</h3>
+            <p>24 人依戰力交叉分配，8 局比賽每人剛好上場 4 局、執法 4 局，個人累計勝分搶 MVP！</p>
+          </div>
+          <div class="feature-card">
+            <h3>⚖️ 起跑讓分與保護</h3>
+            <p>多女生隊伍開局讓分；男球員限制後排起跳攻擊；C 級新手享有 1 次免費補發球保護！</p>
+          </div>
+          <div class="feature-card">
+            <h3>🎯 攔截偷分大作戰</h3>
+            <p>中場限時 45 秒 PK，持籃員隔網搶接/攔截發球，接進敵方發歪的球直接加分！</p>
+          </div>
+        </div>
+
+        <!-- 時間表 Rundown -->
+        <div class="about-block">
+          <h2>⏱️ 活動當天 Rundown（總時長 180 分鐘）</h2>
+          <div class="table-responsive">
+            <table class="rundown-table">
+              <thead>
+                <tr>
+                  <th>時間</th>
+                  <th>流程項目</th>
+                  <th>內容說明與亮點</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>00:00 - 00:15</b><br>(15分)</td>
+                  <td><b>報到與簽到</b></td>
+                  <td>領取個人賽程卡，並在「社團簽名紀念排球」上記名留下紀念。</td>
+                </tr>
+                <tr>
+                  <td><b>00:15 - 00:25</b><br>(10分)</td>
+                  <td><b>熱身與規則說明</b></td>
+                  <td>雙人對碰熱身（12 顆球充裕調度），說明起跑讓分與比賽公約。</td>
+                </tr>
+                <tr>
+                  <td><b>00:25 - 01:25</b><br>(60分)</td>
+                  <td><b>上半場賽事<br>（第 1 ~ 4 局）</b></td>
+                  <td>搶 15 分勝分制。左半場 A 隊 / 右半場 B 隊，休息局同仁擔任裁判執法。</td>
+                </tr>
+                <tr>
+                  <td><b>01:25 - 01:35</b><br>(10分)</td>
+                  <td><b>中場企劃：<br>【攔截偷分大作戰】</b></td>
+                  <td>現場抽取 12 人參加！洗衣籃搶接發球，獲勝組直接帶走酸痛貼布獎品。</td>
+                </tr>
+                <tr>
+                  <td><b>01:35 - 02:35</b><br>(60分)</td>
+                  <td><b>下半場賽事<br>（第 5 ~ 8 局）</b></td>
+                  <td>個人積分衝刺階段！大家開始關心總得分排名，戰況白熱化。</td>
+                </tr>
+                <tr>
+                  <td><b>02:35 - 02:45</b><br>(10分)</td>
+                  <td><b>成績結算與休息</b></td>
+                  <td>收操補充水分，後台 Excel 自動產出 1~24 名個人總積分名次。</td>
+                </tr>
+                <tr>
+                  <td><b>02:45 - 03:00</b><br>(15分)</td>
+                  <td><b>頒獎與慶功</b></td>
+                  <td>階梯式人人領獎！發放賽後手搖飲，全體拿簽名球拍攝大合照。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 獎勵機制 -->
+        <div class="about-block">
+          <h2>🎁 全員階梯式獎勵清單</h2>
+          <ul class="reward-list">
+            <li><b>第 1 ～ 6 名（精銳組）：</b> 專業加厚排球襪 1 雙 ＋ 排球鞋袋（或運動毛巾）1 個</li>
+            <li><b>第 7 ～ 12 名（優秀組）：</b> 專業加厚排球襪 1 雙</li>
+            <li><b>第 13 ～ 24 名（努力組）：</b> 排球造型鑰匙圈 1 個</li>
+            <li><b>中場遊戲特別獎：</b> 盒裝酸痛貼布 3 盒（獲勝隊伍平分）</li>
+            <li><b>全員報到紀念：</b> 社團專屬簽名紀念排球 1 顆 ＋ 賽後慶功手搖飲料 1 杯</li>
+          </ul>
+        </div>
+
+        <div class="form-actions center-actions">
+          <button class="btn primary lg" data-go="register">了解完畢，馬上搶名額報名 →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 報名表單 -->
     <section id="register" class="page">
       <div class="wrap narrow page-pad">
         <div class="page-heading">
@@ -172,7 +269,7 @@
       </div>
     </section>
 
-    <!-- 查詢頁面 -->
+    <!-- 4. 查詢頁面 -->
     <section id="status" class="page">
       <div class="wrap narrow page-pad">
         <div class="page-heading">
@@ -187,7 +284,7 @@
       </div>
     </section>
 
-    <!-- 後台管理 -->
+    <!-- 5. 後台管理 -->
     <section id="admin" class="page admin-page">
       <div class="wrap wide page-pad">
         <div class="admin-heading">
