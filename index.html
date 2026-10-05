@@ -1,9 +1,209 @@
-<label>自認排球戰力分級 *
-  <select required name="level" id="levelSelect">
-    <option value="">請選擇最接近的整體程度（大會編排賽程用）</option>
-    <option value="S">S｜公開組 / 校隊強者（前排限制扣球）</option>
-    <option value="A">A｜系隊熟手 / 具備完整觀念</option>
-    <option value="B">B｜歡樂組 / 具備基本對碰能力</option>
-    <option value="C">C｜初學者 / 新手（享有發球保護）</option>
-  </select>
-</label>
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>【年末大排毒】排球神偷盃｜個人積分大亂鬥報名</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <button class="brand" data-go="home">
+      <span>🏐 【年末大排毒】排球神偷盃</span>
+    </button>
+    <nav class="mainnav">
+      <button data-go="home">首頁</button>
+      <button data-go="register">立即報名</button>
+      <button data-go="status">查詢報名</button>
+      <button class="nav-admin" data-go="admin">管理後台</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 首頁 Landing -->
+    <section id="home" class="page active">
+      <div class="wrap hero-practical-grid">
+        <div class="hero-copy practical-copy">
+          <div class="kicker">24 人限定 · 個人積分混編 · 歡樂破冰</div>
+          <h1>【年末大排毒】排球神偷盃</h1>
+          <p class="practical-lead">打飛一整年的工作壓力！不用擔心找不到隊友，預先混編賽制讓每個人都能快樂上場、歡樂偷分拿大獎！</p>
+          <div class="hero-actions">
+            <button class="btn primary" data-go="register">開始填寫報名表 →</button>
+            <button class="btn ghost" data-go="status">查詢報名狀態</button>
+          </div>
+          <div class="practical-points">
+            <div><b>賽事地點</b><span>華江國小體育館</span></div>
+            <div><b>活動時間</b><span>3 小時（含熱身、8局混排、中場遊戲與頒獎）</span></div>
+            <div><b>參加費用</b><span>福委會全額補助（免費）</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 報名表單 -->
+    <section id="register" class="page">
+      <div class="wrap narrow page-pad">
+        <div class="page-heading">
+          <span>REGISTRATION</span>
+          <h1>活動報名表</h1>
+          <p>請如實填寫資料，特別是戰力自評，這將作為大會公平排定賽程的重要依據。</p>
+        </div>
+
+        <div class="progress">
+          <div class="active"><b>1</b><span>基本資料</span></div>
+          <div><b>2</b><span>戰力與習慣</span></div>
+          <div><b>3</b><span>補給與確認</span></div>
+        </div>
+
+        <form id="registrationForm" class="form-shell">
+          <!-- Step 1 -->
+          <section class="form-step show" data-step="1">
+            <div class="form-title"><h2>1. 個人與部門資料</h2></div>
+            <div class="form-grid two">
+              <label>真實姓名 *<input required name="name" placeholder="請填寫真實姓名" /></label>
+              <label>暱稱 / 球衣背號 *<input required name="nickname" placeholder="廣播與賽程表稱呼" /></label>
+              <label>性別 *
+                <select required name="gender">
+                  <option value="">請選擇（作為起跑讓分依據）</option>
+                  <option>男</option><option>女</option>
+                </select>
+              </label>
+              <label>所屬部門 / 辦公室分機 *<input required name="department" placeholder="例如：專案部 / #1234" /></label>
+              <label>手機號碼 *<input required name="phone" placeholder="09xxxxxxxx" pattern="09[0-9]{8}" /></label>
+              <label>公司 Email *<input required type="email" name="email" placeholder="name@company.com" /></label>
+            </div>
+            <div class="form-actions end">
+              <button class="btn primary next" type="button">下一步：戰力自評 →</button>
+            </div>
+          </section>
+
+          <!-- Step 2 -->
+          <section class="form-step" data-step="2">
+            <div class="form-title"><h2>2. 排球戰力與場上特質</h2></div>
+            <div class="form-grid two">
+              <label>自認排球戰力分級 *
+                <select required name="level" id="levelSelect">
+                  <option value="">請選擇最接近的整體程度</option>
+                  <option value="S">S｜公開組 / 校隊強者（前排限制扣球）</option>
+                  <option value="A">A｜系隊熟手 / 觀念清晰控球穩</option>
+                  <option value="B">B｜歡樂組 / 具備基本對碰能力</option>
+                  <option value="C">C｜初學者 / 新手（享有發球保護）</option>
+                </select>
+              </label>
+              <label>最常打的位置 *
+                <select required name="position">
+                  <option value="">請選擇</option>
+                  <option>主攻</option><option>副攻</option><option>舉球</option>
+                  <option>自由球員</option><option>沒有固定位置</option>
+                </select>
+              </label>
+              <label>目前打球頻率 *
+                <select required name="frequency">
+                  <option value="">請選擇</option>
+                  <option>每週 2 次以上</option><option>每週約 1 次</option>
+                  <option>每月 1–3 次</option><option>偶爾 / 很久沒打</option>
+                </select>
+              </label>
+              <label>休息局執法意願 *
+                <select required name="referee">
+                  <option value="">請選擇</option>
+                  <option>沒問題，願意擔任主審/線審/記分</option>
+                  <option>聽從大會安排</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="tag-question" data-tag-picker="traits" data-min="1" data-max="3">
+              <div class="tag-question-head">
+                <div><b>個人場上風格 / 特質 *</b><small>最多選擇 3 個</small></div>
+                <span class="tag-count">0 / 3</span>
+              </div>
+              <div class="tag-options" data-options></div>
+              <input type="hidden" name="traits" data-tag-value />
+              <div class="tag-error" data-tag-error></div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn ghost prev" type="button">← 上一步</button>
+              <button class="btn primary next" type="button">下一步：賽後補給 →</button>
+            </div>
+          </section>
+
+          <!-- Step 3 -->
+          <section class="form-step" data-step="3">
+            <div class="form-title"><h2>3. 獎品尺寸與賽後補給</h2></div>
+            <div class="form-grid two">
+              <label>排球襪尺寸 (獎品預備) *
+                <select required name="sockSize">
+                  <option value="">請選擇腳掌尺寸</option>
+                  <option>S (22 - 24 cm)</option>
+                  <option>M (25 - 27 cm)</option>
+                  <option>L (28 - 30 cm)</option>
+                </select>
+              </label>
+              <label>賽後慶功飲料點餐 *<input required name="drink" placeholder="例如：紅茶拿鐵 微糖微冰" /></label>
+            </div>
+
+            <div class="form-grid">
+              <label>中場【攔截偷分大作戰】參加意願 *
+                <select required name="miniGame">
+                  <option value="">請選擇</option>
+                  <option>超想上去！我想體驗拿籃子飛撲撈球！</option>
+                  <option>在場邊喝水幫大家加油、遞球就好</option>
+                </select>
+              </label>
+              <label>想對主辦單位或隊友說的話（選填）
+                <textarea name="organizerNote" rows="3" placeholder="例如：希望可以跟某某同仁分到同一組、很久沒打請大家包涵..."></textarea>
+              </label>
+            </div>
+
+            <div class="consent-panel">
+              <label class="checkbox">
+                <input required type="checkbox" name="policyAccepted" /> 我已確認填寫資料無誤，並同意遵守「友誼第一、安全至上」之活動章程。
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn ghost prev" type="button">← 上一步</button>
+              <button class="btn primary" type="submit">完成並送出報名 →</button>
+            </div>
+          </section>
+        </form>
+      </div>
+    </section>
+
+    <!-- 查詢頁面 -->
+    <section id="status" class="page">
+      <div class="wrap narrow page-pad">
+        <div class="page-heading">
+          <h1>報名進度查詢</h1>
+          <p>輸入報名時的 Email 或手機號碼進行查詢。</p>
+        </div>
+        <div class="status-search card-shell">
+          <label>Email 或手機<input id="statusKey" placeholder="09xxxxxxxx 或 name@company.com" /></label>
+          <button class="btn primary" id="statusBtn">查詢進度</button>
+        </div>
+        <div id="statusResult" class="status-panel hidden"></div>
+      </div>
+    </section>
+
+    <!-- 後台管理 -->
+    <section id="admin" class="page admin-page">
+      <div class="wrap wide page-pad">
+        <div class="admin-heading">
+          <h1>賽事管理後台</h1>
+          <button id="seedDemo" class="btn ghost">帶入預設報名資料</button>
+        </div>
+        <div class="kpi-grid">
+          <div><small>總報名人數</small><strong id="kpiTotal">0</strong></div>
+          <div><small>S / A 級強者</small><strong id="kpiHigh">0</strong></div>
+          <div><small>B / C 級選手</small><strong id="kpiLow">0</strong></div>
+        </div>
+        <div class="admin-content" id="admin-review"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
